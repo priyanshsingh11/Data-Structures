@@ -14,9 +14,8 @@ I maintain this repo to track my progress, improve problem-solving skills, and b
 - 🔹 **Daily updates** as I solve new questions  
 - 🔹 **Simple explanations** inside each file  
 
----Each folder may contain:
-- `problem_name.py` or `problem_name.cpp`  
-- `explanation.md` (optional)
+---Each file may contain:
+- `Ques Number. problem_name`  
 
 ---
 
