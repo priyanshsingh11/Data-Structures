@@ -1,5 +1,20 @@
 
-Each folder may contain:
+# 📘 DSA Practice – LeetCode / GFG / CodeForces
+
+This repository contains my daily solutions to **Data Structures & Algorithms (DSA)** problems from platforms like **LeetCode**, **GeeksforGeeks**, and **CodeForces**.  
+I maintain this repo to track my progress, improve problem-solving skills, and build a solid foundation in algorithms.
+
+---
+
+## 🚀 What’s Inside?
+
+- 🔹 **Clean and optimized solutions**  
+- 🔹 **Python / C++ implementations** (depending on the problem)  
+- 🔹 **Structured folders by topic**  
+- 🔹 **Daily updates** as I solve new questions  
+- 🔹 **Simple explanations** inside each file  
+
+---Each folder may contain:
 - `problem_name.py` or `problem_name.cpp`  
 - `explanation.md` (optional)
 
@@ -12,14 +27,6 @@ Each folder may contain:
 - Write **clean, readable, and efficient code**  
 - Maintain **consistency** with daily problem-solving  
 
----
-
-## 📝 How to Use This Repo
-
-- Browse by **topic**, **difficulty**, or **problem name**  
-- Compare multiple solutions and approaches  
-- Fork the repo and practice along  
-- Use explanations to reinforce understanding  
 
 ---
 
@@ -31,52 +38,3 @@ Each folder may contain:
 - 📅 Weekly progress logs  
 - 🧪 Test cases for common problems  
 
----
-
-If you'd like, I can also create:
-- ✨ A more aesthetic README with badges & shields  
-- 📁 Auto-generated problem index  
-- 🔥 A dark-theme styled version  
-
-Just tell me!
-
-Each folder may contain:
-- `problem_name.py` or `problem_name.cpp`  
-- `explanation.md` (optional)
-
----
-
-## 🎯 Goals
-
-- Strengthen **core DDSA concepts**  
-- Prepare for **coding interviews**  
-- Write **clean, readable, and efficient code**  
-- Maintain **consistency** with daily problem-solving  
-
----
-
-## 📝 How to Use This Repo
-
-- Browse by **topic**, **difficulty**, or **problem name**  
-- Compare multiple solutions and approaches  
-- Fork the repo and practice along  
-- Use explanations to reinforce understanding  
-
----
-
-## ⭐ Future Additions
-
-- 📝 Editorial-style explanations  
-- ⚡ Brute Force → Optimized solutions for each problem  
-- 📊 Time & Space complexity notes  
-- 📅 Weekly progress logs  
-- 🧪 Test cases for common problems  
-
----
-
-If you'd like, I can also create:
-- ✨ A more aesthetic README with badges & shields  
-- 📁 Auto-generated problem index  
-- 🔥 A dark-theme styled version  
-
-Just tell me!
