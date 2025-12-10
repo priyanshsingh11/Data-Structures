@@ -1,0 +1,32 @@
+from collections import Counter 
+
+class Solution(object):
+    def canConstruct(self, ransomNote, magazine):
+        left=Counter(ransomNote)
+        right=Counter(magazine)
+
+        for word in left:
+            if (left[word]>right[word]):
+                return False
+        return True
+
+
+
+
+---------------- #2 SOLUTION ---------------- 
+
+class Solution(object):
+    def canConstruct(self, ransomNote, magazine):
+        mdict = dict()
+        for m in magazine:
+            if m not in mdict:
+                mdict[m] = 1
+            else:
+                mdict[m] += 1
+        for rn in ransomNote:
+            if rn not in mdict:
+                return False
+            mdict[rn] -= 1      
+            if mdict[rn] == 0:
+                del mdict[rn] # dict take neagative value and loop continues till TRUE 
+        return True
