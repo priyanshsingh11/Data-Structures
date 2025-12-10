@@ -1,0 +1,14 @@
+class Solution(object):
+    def groupAnagrams(self, strs):
+        
+        ans={}
+
+        for i in strs:
+            key="".join(sorted(i))
+
+            if key not in ans:
+                ans[key]=[] # this create a list for it so that next similar ones can come their  
+
+            ans[key].append(i)
+        
+        return ans.values()
