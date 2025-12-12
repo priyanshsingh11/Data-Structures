@@ -1,6 +1,10 @@
 
 # 📘 DSA Practice – LeetCode / GFG / CodeForces
 
+<a href="https://leetcode.com/priyanshsingh11/">
+  <img src="https://leetcard.jacoblin.cool/priyanshsingh11?theme=dark" width="400" />
+</a>
+
 This repository contains my daily solutions to **Data Structures & Algorithms (DSA)** problems from platforms like **LeetCode**, **GeeksforGeeks**, and **CodeForces**.  
 I maintain this repo to track my progress, improve problem-solving skills, and build a solid foundation in algorithms.
 
