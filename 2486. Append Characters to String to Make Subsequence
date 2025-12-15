@@ -1,0 +1,12 @@
+class Solution(object):
+    def appendCharacters(self, s, t):
+        first = 0
+        second = 0
+        
+        while first < len(s) and second < len(t):
+            if t[second] == s[first]:
+                second += 1
+            first += 1
+        
+        return len(t) - second
+
