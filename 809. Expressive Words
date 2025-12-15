@@ -1,0 +1,41 @@
+class Solution(object):
+    def expressiveWords(self, s, words):
+
+        def rle(x):
+            groups = []
+            i = 0
+            while i < len(x):
+                ch = x[i]
+                cnt = 0
+                while i < len(x) and x[i] == ch:
+                    i += 1
+                    cnt += 1
+                groups.append((ch, cnt))
+            return groups
+
+        base = rle(s)
+        ans = 0
+
+        for word in words:
+            w = rle(word)
+
+            if len(base) != len(w):
+                continue
+
+            ok = True
+            for (c1, n1), (c2, n2) in zip(base, w):
+                if c1 != c2:
+                    ok = False
+                    break
+                if n1 < n2:
+                    ok = False
+                    break
+                if n1 != n2 and n1 < 3:
+                    ok = False
+                    break
+
+            if ok:
+                ans += 1
+
+        return ans
+ 
