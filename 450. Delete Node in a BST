@@ -1,32 +1,45 @@
 # Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode(object):
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 
 class Solution(object):
+
+    def minValueNode(self, root):
+        current = root
+        while current and current.left:
+            current = current.left
+        return current
+
     def deleteNode(self, root, key):
         if not root:
             return None
 
-        if key < root.val:
+        if root.val > key:
             root.left = self.deleteNode(root.left, key)
-        elif key > root.val:
+
+        elif root.val < key:
             root.right = self.deleteNode(root.right, key)
+
         else:
-            if not root.left:
+            # Case 1: No child
+            if not root.left and not root.right:
+                return None
+
+            # Case 2: One child
+            elif not root.left:
                 return root.right
-            if not root.right:
+
+            elif not root.right:
                 return root.left
 
-            successor = self.getMin(root.right)
-            root.val = successor.val
-            root.right = self.deleteNode(root.right, successor.val)
+            # Case 3: Two children
+            else:
+                temp = self.minValueNode(root.right)
+                root.val = temp.val
+                root.right = self.deleteNode(root.right, temp.val)
 
         return root
-
-    def getMin(self, node):
-        while node.left:
-            node = node.left
-        return node
