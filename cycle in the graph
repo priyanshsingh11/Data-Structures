@@ -1,0 +1,48 @@
+from collections import deque
+
+class Solution:
+    # ---------------- BFS ----------------
+    def iscyclicbfs(self, node, visited, adj):
+        parent = {}
+        parent[node] = -1
+        visited[node] = True
+
+        q = deque()
+        q.append(node)
+
+        while q:
+            front = q.popleft()
+
+            for neighbour in adj[front]:
+                if visited.get(neighbour, False) and parent[front] != neighbour:
+                    return True
+                elif not visited.get(neighbour, False):
+                    visited[neighbour] = True
+                    parent[neighbour] = front
+                    q.append(neighbour)
+
+        return False
+
+    # ---------------- DFS ----------------
+    def iscyclicdfs(self, node, parent, visited, adj):
+        visited[node] = True
+
+        for neighbour in adj[node]:
+            if not visited.get(neighbour, False):
+                if self.iscyclicdfs(neighbour, node, visited, adj):
+                    return True
+            elif neighbour != parent:
+                return True
+
+        return False
+
+    # ---------------- MAIN ----------------
+    def isCycle(self, V, adj):
+        visited = {}
+
+        for i in range(V):
+            if not visited.get(i, False):
+                if self.iscyclicdfs(i, -1, visited, adj):
+                    return True
+
+        return False
