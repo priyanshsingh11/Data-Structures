@@ -16,7 +16,7 @@ class Solution:
                     if dfs(neigh):
                         return True
                     
-                elif path[neigh]:
+                elif vis[neigh] and path[neigh]:
                     return True
                 
                 
